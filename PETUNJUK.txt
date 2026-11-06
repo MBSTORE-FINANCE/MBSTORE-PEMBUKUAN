@@ -1,0 +1,28 @@
+MBSTORE - Aplikasi Pembukuan Konter Pulsa
+
+ISI PAKET
+- index.html: aplikasi pembukuan
+- manifest.webmanifest: identitas PWA
+- sw.js: cache/offline saat dijalankan melalui HTTPS/localhost
+
+CARA MENJALANKAN
+1. Ekstrak ZIP ini.
+2. Buka index.html di browser untuk mencoba aplikasi.
+3. Untuk memasang sebagai aplikasi (Install app / Add to Home Screen) dan mengaktifkan cache offline PWA, unggah SELURUH isi folder ke hosting HTTPS milik Anda. Service worker tidak aktif dari file://.
+4. Buka alamat HTTPS tersebut di Chrome Android, pilih menu browser > Install app / Tambahkan ke layar utama.
+
+FITUR
+- Modal awal per akun yang dapat diubah.
+- Akun Cash, GoPay, DANA, SeaBank, Pulsa Dataku, OVO, ShopeePay, dan akun tambahan.
+- Penjualan/layanan: harga modal, harga jual, keuntungan otomatis.
+- Pengeluaran, transfer antar akun, isi saldo modal, penyesuaian saldo.
+- Saldo akun dihitung ulang dari modal awal dan transaksi.
+- Riwayat edit/hapus, filter, laporan rentang tanggal, cetak, ekspor CSV, backup/restore JSON.
+
+CATATAN PENTING
+- Data disimpan lokal di browser/perangkat. Backup JSON secara berkala; data tidak otomatis tersinkron ke HP lain.
+- Aplikasi ini tidak terhubung otomatis ke provider pulsa/e-wallet, bank, atau API. Masukkan transaksi secara manual; kalkulasi saldo dan laba dilakukan otomatis.
+- Untuk transaksi penjualan, pilih akun sumber modal (saldo yang dipakai), akun penerima uang pelanggan, isi modal dan harga jual.
+- Isi saldo modal dan transfer tidak dihitung sebagai omzet/laba.
+- Modal akhir di dashboard adalah jumlah saldo berjalan semua akun. Laba bersih adalah laba penjualan dikurangi pengeluaran yang dicatat.
+- Aplikasi ini merupakan paket PWA sumber, bukan APK Android yang sudah ditandatangani. Pembuatan APK native memerlukan proses build Android terpisah.
